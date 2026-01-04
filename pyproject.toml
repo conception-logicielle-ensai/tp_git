@@ -1,0 +1,16 @@
+[project]
+name = "library-app"
+version = "0.1.0"
+description = "Mini application FastAPI de gestion de bibliothèque"
+requires-python = ">=3.11"
+dependencies = [
+"fastapi",
+"uvicorn",
+]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I"]
+
+[tool.ruff.format]
+quote-style = "double"
