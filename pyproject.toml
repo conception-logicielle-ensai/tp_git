@@ -4,13 +4,24 @@ version = "0.1.0"
 description = "Mini application FastAPI de gestion de bibliothèque"
 requires-python = ">=3.11"
 dependencies = [
-"fastapi",
-"uvicorn",
+    "fastapi",
+    "sqlalchemy>=2.0.45",
+    "uvicorn",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.10",
 ]
 
 [tool.ruff]
 line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
 select = ["E", "F", "I"]
+fixable = ["ALL"]
 
 [tool.ruff.format]
 quote-style = "double"
+indent-style = "space"
