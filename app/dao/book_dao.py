@@ -20,3 +20,5 @@ class BookDAO:
         self.session.commit()
         self.session.refresh(book)
         return book
+    def delete(self, book:Book):
+        pass
