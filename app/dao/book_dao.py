@@ -20,3 +20,7 @@ class BookDAO:
         self.session.commit()
         self.session.refresh(book)
         return book
+
+    def delete(self, book_id: int):
+        self.session.remove(book_id)
+        return self.get_by_id(book_id)
