@@ -15,5 +15,5 @@ class BookService:
     def add_book(self, title: str, author: str) -> Book:
         return self._dao.create(title=title, author=author)
     
-    def del_book(self, book_id: int) -> Book:
+    def del_book(self, book_id: int) -> Book | None:
         return self._dao.delete(book_id)
